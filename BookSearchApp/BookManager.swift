@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 class BookManager: ObservableObject {
     @Published var favoriteBooks: [BookSummary] = []
     let dataManager = SwiftDataManager<BookSummary>()
@@ -21,3 +22,5 @@ class BookManager: ObservableObject {
        self.favoriteBooks = books
     }
 }
+
+

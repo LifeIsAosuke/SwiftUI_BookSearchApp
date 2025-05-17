@@ -7,8 +7,8 @@
 
 import SwiftUI
 
+
 struct LibraryView: View {
-    
     @StateObject private var bookManager = BookManager()
     let columns = [GridItem(.flexible()), GridItem(.flexible())]
     
@@ -40,6 +40,7 @@ struct LibraryView: View {
         }
     }
 }
+
 
 #Preview {
     LibraryView()

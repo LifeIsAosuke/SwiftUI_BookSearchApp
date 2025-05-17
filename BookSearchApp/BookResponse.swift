@@ -28,3 +28,5 @@ struct ImageLink: Codable {
     var smallThumbnail: String?
     var thumbnail: String?
 }
+
+

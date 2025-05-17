@@ -7,23 +7,24 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
     var body: some View {
-        
         TabView {
+            LibraryView().tabItem { Label(
+                title: { Text("Library") },
+                icon: { Image(systemName: "book.fill") }
+            ) }
             
-            LibraryView().tabItem {
-                    Image(systemName: "book.fill")
-                    Text("Library")
-                }
+            SearchView().tabItem { Label(
+                title: { Text("Search") },
+                icon: { Image(systemName: "magnifyingglass") }
+            ) }
             
-            SearchView().tabItem {
-                    Image(systemName: "magnifyingglass")
-                    Text("Search")
-                }
         }
     }
 }
+
 
 #Preview {
     ContentView()

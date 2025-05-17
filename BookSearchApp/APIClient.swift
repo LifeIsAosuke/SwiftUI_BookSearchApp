@@ -8,7 +8,6 @@
 import Foundation
 
 class APIClient {
-    
     func fetchData<T: Decodable>(from urlString: String, responseType: T.Type) async -> T? {
         
         do {
@@ -17,7 +16,8 @@ class APIClient {
                 return nil
             }
             
-            let (data, response) = try await URLSession.shared.data(from: url)
+//            let (data, response) = try await URLSession.shared.data(from: url)
+            let (data,response) = try await URLSession(configuration: .ephemeral).data(from: url)
             guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
                 return nil
             }

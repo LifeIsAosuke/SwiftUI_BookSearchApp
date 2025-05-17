@@ -8,6 +8,7 @@
 import Foundation
 import SwiftData
 
+
 @Model
 final class BookSummary {
     @Attribute(.unique) var id: String

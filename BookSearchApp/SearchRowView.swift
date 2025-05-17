@@ -49,6 +49,8 @@ struct SearchRowView: View {
     }
 }
 
+
 #Preview {
     SearchRowView(item: Item(kind: "", id: "0", selfLink: "", volumeInfo: VolumeInfo()))
 }
+
