@@ -8,9 +8,10 @@
 import Foundation
 
 class APIClient {
+    
     func fetchData<T: Decodable>(from urlString: String, responseType: T.Type) async -> T? {
+        
         do {
-            
             guard let encodedUrlString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
                   let url = URL(string: encodedUrlString) else {
                 return nil
@@ -21,7 +22,7 @@ class APIClient {
                 return nil
             }
             
-            let decodedData = try JSONDecoder() .decode (responseType, from: data)
+            let decodedData = try JSONDecoder().decode(responseType, from: data)
             return decodedData
             
         } catch {

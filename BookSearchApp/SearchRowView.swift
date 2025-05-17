@@ -7,15 +7,13 @@
 
 import SwiftUI
 
+
 struct SearchRowView: View {
-    
     @StateObject private var bookManager = BookManager()
     @State var isSaved: Bool = false
-    
     let item: Item
     
     var body: some View {
-        
         HStack {
             if let thumbnailUrl = item.volumeInfo.imageLinks?.thumbnail {
                 AsyncImage(url: URL(string: thumbnailUrl)) { image in
@@ -32,7 +30,6 @@ struct SearchRowView: View {
                 Text(item.volumeInfo.title ?? "")
                     .font(.headline)
                     .bold()
-                
                 Text(item.volumeInfo.publisher ?? "")
                     .font(.caption)
             }

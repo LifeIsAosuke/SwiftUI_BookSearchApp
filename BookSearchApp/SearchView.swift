@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct SearchView: View {
-    
     @State private var searchText = ""
     @StateObject private var apiClient = BooksAPIClient()
     

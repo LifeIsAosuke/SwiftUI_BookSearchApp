@@ -7,12 +7,11 @@
 
 import SwiftUI
 
+
 struct BookThumbnailView: View {
-    
     let book: BookSummary
     
     var body: some View {
-        
         ZStack {
             if let thumbnailUrlString = book.thumbnail, let thumbnailUrl = URL(string: thumbnailUrlString) {
                 AsyncImage(url: thumbnailUrl) { image in
@@ -29,6 +28,9 @@ struct BookThumbnailView: View {
     }
 }
 
+
 #Preview {
-    BookThumbnailView(book: BookSummary(id: "", title: "Swiftのすべて", thumbnail: "http://books.google.com/books/content?id=85ZKBgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"))
+    BookThumbnailView(book: BookSummary(id: "",
+                                        title: "Swiftの全て",
+                                        thumbnail: "http://books.google.com/books/content?id=85ZKBgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"))
 }

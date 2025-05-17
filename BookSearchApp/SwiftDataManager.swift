@@ -7,7 +7,6 @@
 
 import Foundation
 import SwiftData
-
 class SwiftDataManager<T: PersistentModel> {
     
     var container: ModelContainer?
@@ -39,7 +38,7 @@ class SwiftDataManager<T: PersistentModel> {
         if let context {
             do {
                 let descriptor = FetchDescriptor<T>()
-                return  try context.fetch(descriptor)
+                return try context.fetch(descriptor)
             } catch {
                 print(error)
                 return []

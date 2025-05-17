@@ -1,16 +1,11 @@
-//
-//  BookResponse.swift
-//  BookSearchApp
-//
-//  Created by A S on 2025/05/16.
-//
-
 import Foundation
+
 
 struct BookResponse: Codable {
     var totalItems: Int
     var items: [Item]
 }
+
 
 struct Item: Codable {
     var kind: String
@@ -19,6 +14,7 @@ struct Item: Codable {
     var volumeInfo: VolumeInfo
 }
 
+
 struct VolumeInfo: Codable {
     var title: String?
     var authors: [String]?
@@ -26,6 +22,7 @@ struct VolumeInfo: Codable {
     var publisher: String?
     var imageLinks: ImageLink?
 }
+
 
 struct ImageLink: Codable {
     var smallThumbnail: String?

@@ -12,12 +12,12 @@ class BookManager: ObservableObject {
     let dataManager = SwiftDataManager<BookSummary>()
     
     func saveBook(title: String, thumbnail: String?) {
-        let newBook = BookSummary(id: UUID().uuidString, title: title, thumbnail: thumbnail)
-        dataManager.saveItem(data: newBook)
+       let newBook = BookSummary(id: UUID().uuidString, title: title, thumbnail: thumbnail)
+       dataManager.saveItem(data: newBook)
     }
     
     func fetchAllBooks() {
-        let books = dataManager.fetchAll()
-        self.favoriteBooks = books
+       let books = dataManager.fetchAll()
+       self.favoriteBooks = books
     }
 }
