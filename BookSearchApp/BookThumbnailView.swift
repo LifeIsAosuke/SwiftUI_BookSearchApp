@@ -28,7 +28,7 @@ struct BookThumbnailView: View {
     }
 }
 
-
+// 修正
 #Preview {
     BookThumbnailView(book: BookSummary(id: "",
                                         title: "Swiftの全て",
